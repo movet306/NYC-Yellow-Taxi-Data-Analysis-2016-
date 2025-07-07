@@ -18,6 +18,8 @@ This project presents a comprehensive data analytics case study on **New York Ci
 - **Python (pandas, matplotlib):**  
   - Used for advanced data manipulation, visualizations, and custom analysis outside the limits of SQL.  
   - Data exported from BigQuery and further explored in Jupyter Notebook environment.
+> 📓 **For full Python code, visualizations, and calculation formulas, see the companion Jupyter Notebook:**  
+> [NYC-Yellow-Taxi-Data-Analysis-2016-visualizations.ipynb](./NYC-Yellow-Taxi-Data-Analysis-2016-visualizations.ipynb)
 
 - **SQL:**  
   - All business questions were answered with dedicated, reproducible SQL queries.  
