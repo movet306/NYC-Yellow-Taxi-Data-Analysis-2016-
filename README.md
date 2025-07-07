@@ -69,10 +69,11 @@ FROM `bigquery-public-data.new_york_taxi_trips.tlc_yellow_trips_2016`
 GROUP BY trip_date
 ORDER BY trip_date
 LIMIT 100
+```
 
----
 ![image](https://github.com/user-attachments/assets/e7005c85-03bd-4867-94f0-d82b11cf77e8)
 
+**Key Insight:**
 Taxi demand is relatively stable but dips after major holidays.
 
 
@@ -96,10 +97,11 @@ SELECT
 FROM `bigquery-public-data.new_york_taxi_trips.tlc_yellow_trips_2016`
 GROUP BY pickup_hour
 ORDER BY pickup_hour
-Key Insight:
+```
 
 ![image](https://github.com/user-attachments/assets/2c649bfe-0b1e-4727-aa5f-c45a2f50fc83)
 
+**Key Insight:**
 Peak demand consistently occurs between 6 PM and 10 PM, especially on Fridays and Saturdays.
 
 Early morning hours (2–5 AM) are the least busy, with late-night activity on weekends due to nightlife.
@@ -120,8 +122,8 @@ SELECT
   ROUND(AVG(tip_amount / fare_amount), 3) AS avg_tip_rate
 FROM `bigquery-public-data.new_york_taxi_trips.tlc_yellow_trips_2016`
 WHERE fare_amount > 0 AND tip_amount IS NOT NULL
-
-Key Insight:
+```
+**Key Insight:**
 
 The overall average tip rate is around 16.5%.
 
@@ -142,10 +144,11 @@ FROM `bigquery-public-data.new_york_taxi_trips.tlc_yellow_trips_2016`
 WHERE fare_amount > 0 AND tip_amount IS NOT NULL
 GROUP BY pickup_hour
 ORDER BY pickup_hour
+```
 
 ![image](https://github.com/user-attachments/assets/731ecda6-1154-40c3-a8d4-fb0a823c85be)
 
-Key Insight:
+**Key Insight:**
 
 Tip rates peak at night (01:00–03:00), reaching around 19%.
 
@@ -179,10 +182,10 @@ FROM `bigquery-public-data.new_york_taxi_trips.tlc_yellow_trips_2016`
 WHERE fare_amount > 0 AND tip_amount IS NOT NULL
 GROUP BY payment_method
 ORDER BY avg_tip_rate DESC
-
+```
 ![image](https://github.com/user-attachments/assets/4609cb79-86ff-42de-97ac-5e13184e0795)
 
-Key Insight:
+**Key Insight:**
 
 Credit card payments result in the highest average tip rates (~18.5%).
 
@@ -216,10 +219,11 @@ FROM `bigquery-public-data.new_york_taxi_trips.tlc_yellow_trips_2016`
 WHERE fare_amount > 0 AND tip_amount IS NOT NULL
 GROUP BY distance_bucket
 ORDER BY avg_tip_rate DESC
+```
 
 ![image](https://github.com/user-attachments/assets/d7b8674a-e292-47ee-994f-b64764ff65af)
 
-Key Insight:
+**Key Insight:**
 
 Short trips (0–1 mile) have the highest average tip rates (~22.5%), likely due to minimum tip floors and “round-up” behavior on small fares.
 
@@ -243,10 +247,11 @@ FROM `bigquery-public-data.new_york_taxi_trips.tlc_yellow_trips_2016`
 WHERE dropoff_datetime IS NOT NULL
   AND pickup_datetime IS NOT NULL
   AND TIMESTAMP_DIFF(dropoff_datetime, pickup_datetime, MINUTE) BETWEEN 1 AND 180
+```
 
 ![image](https://github.com/user-attachments/assets/b8c55d62-11a2-4c61-bee8-928dd4d537cc)
 
-Key Insight:
+**Key Insight:**
 
 The average ride duration is about 13.7 minutes.
 
@@ -271,10 +276,11 @@ SELECT
 FROM `bigquery-public-data.new_york_taxi_trips.tlc_yellow_trips_2016`
 GROUP BY day_of_week
 ORDER BY day_of_week
+```
 
 ![image](https://github.com/user-attachments/assets/33b480ac-e15c-42e7-9e0d-cde9d94988d9)
 
-Key Insight:
+**Key Insight:**
 
 Fridays and Saturdays have the highest ride counts, driven by nightlife and weekend activity.
 
@@ -295,10 +301,11 @@ SELECT
 FROM `bigquery-public-data.new_york_taxi_trips.tlc_yellow_trips_2016`
 GROUP BY month
 ORDER BY month
+```
 
 ![image](https://github.com/user-attachments/assets/9c36da0f-c6bb-41f5-a9dd-48424af180e1)
 
-Key Insight:
+**Key Insight:**
 
 Ride volumes peak in March (over 12.2 million rides) and remain high through May.
 
@@ -323,10 +330,11 @@ FROM `bigquery-public-data.new_york_taxi_trips.tlc_yellow_trips_2016`
 WHERE pickup_datetime IS NOT NULL
 GROUP BY day_of_week, pickup_hour
 ORDER BY day_of_week, pickup_hour
+```
 
 ![image](https://github.com/user-attachments/assets/4c39a360-41f8-443d-a360-dacdc99b46bf)
 
-Key Insight:
+**Key Insight:**
 
 The busiest hours are consistently late evenings (6 PM to 10 PM) across almost all days, with Friday and Saturday nights peaking the most (nightlife/social events).
 
@@ -353,10 +361,11 @@ WHERE
   fare_amount > 0
   AND tip_amount IS NOT NULL
   AND TIMESTAMP_DIFF(dropoff_datetime, pickup_datetime, SECOND) > 0
+```
 
 ![image](https://github.com/user-attachments/assets/20e59b93-bcd9-4ab2-be00-353a66798b2c)
 
-Key Insight:
+**Key Insight:**
 
 There is no clear upward trend in tip percentage as trip duration increases.
 
@@ -381,10 +390,11 @@ FROM `bigquery-public-data.new_york_taxi_trips.tlc_yellow_trips_2016`
 WHERE
   fare_amount > 0
   AND tip_amount IS NOT NULL
+```
 
 ![image](https://github.com/user-attachments/assets/5b0d5395-e7d3-4d49-9f7d-0be3fd31f257)
 
-Key Insight:
+**Key Insight:**
 
 There is a clear inverse relationship between fare amount and tip percentage: smaller fares tend to have a higher tip rate.
 
