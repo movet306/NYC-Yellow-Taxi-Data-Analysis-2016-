@@ -70,6 +70,7 @@ GROUP BY trip_date
 ORDER BY trip_date
 LIMIT 100
 
+---
 ![image](https://github.com/user-attachments/assets/e7005c85-03bd-4867-94f0-d82b11cf77e8)
 
 Taxi demand is relatively stable but dips after major holidays.
@@ -80,6 +81,7 @@ Preliminary analysis shows higher trip counts on Fridays and Saturdays.
 
 Average daily rides in 2016 were ~380,000.
 
+---
 ## 2. Hourly Trip Volume Analysis
 
 ### 🔍 Business Question
