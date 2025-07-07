@@ -1,0 +1,6 @@
+payment_method,avg_tip_rate,trip_count
+Credit Card,0.255,86176669
+Unknown,0.073,9
+No Charge,0.001,509629
+Dispute,0,160212
+Cash,0,44195138

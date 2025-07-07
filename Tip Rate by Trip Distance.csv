@@ -1,0 +1,7 @@
+distance_bucket,avg_tip_rate,trip_count
+0-1 miles,0.225,34004237
+10+ miles,0.215,7540832
+6-10 miles,0.16,7583490
+4-6 miles,0.141,9417588
+1-2 miles,0.141,42339388
+2-4 miles,0.139,30156122
