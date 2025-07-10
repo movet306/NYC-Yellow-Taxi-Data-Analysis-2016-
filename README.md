@@ -1,4 +1,8 @@
 # NYC-Yellow-Taxi-Data-Analysis-2016-
+
+> **Project Owner:** Mert Ovet  
+> [LinkedIn: linkedin.com/in/mertovet](https://linkedin.com/in/mertovet)
+
 ## Introduction
 
 This project presents a comprehensive data analytics case study on **New York City’s Yellow Taxi rides in 2016**. The analysis aims to uncover patterns in ridership, tipping behavior, and temporal demand, supporting operational and strategic decision-making for mobility, urban planning, and product teams.
@@ -404,4 +408,6 @@ Passengers tip more generously (as a percentage) for short, cheap rides—possib
 
 This trend has important implications for designing driver incentive programs and optimizing payment UX.
 
-
+## 🔗 Project Owner
+**Mert Ovet**  
+[LinkedIn: linkedin.com/in/mertovet](https://linkedin.com/in/mertovet)
